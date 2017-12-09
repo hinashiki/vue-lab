@@ -1,5 +1,9 @@
 <template lang="html">
-  <p>{{ msg }}</p>
+  <div class="home">
+    <h1>hogehoge</h1>
+    <h3>fugafuga</h3>
+    <p>{{ msg }}</p>
+  </div>
 </template>
 
 <script>
