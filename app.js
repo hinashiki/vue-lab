@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 Vue.config.devtools = true;
 Vue.use(VueRouter);
 
-import Home from './pages/home.vue';
+import Home from './pages/Home.vue';
 var Foo = {
   template: '<p>foo</p>'
 };
