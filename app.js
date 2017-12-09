@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-//Vue.config.devtools = true;
+Vue.config.devtools = true;
 Vue.use(VueRouter);
 
-var Home = Vue.extend(require('./pages/home.vue'));
+import Home from './pages/home.vue';
 var Foo = {
   template: '<p>foo</p>'
 };
