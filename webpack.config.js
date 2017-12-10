@@ -1,8 +1,9 @@
 var path = require('path');
-module.exports ={
+var webpack = require('webpack');
+module.exports = {
   entry: './app.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/js'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -15,7 +16,23 @@ module.exports ={
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'file-loader?name=../font/[name].[ext]'
       }
     ]
-  }
-}
+
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
+  ]
+};
