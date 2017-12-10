@@ -4,12 +4,8 @@ Vue.config.devtools = true;
 Vue.use(VueRouter);
 
 import Home from './pages/Home.vue';
-var Foo = {
-  template: '<p>foo</p>'
-};
-var Bar = {
-  template: '<p>bar</p>'
-};
+import Foo from './pages/Foo.vue';
+import Bar from './pages/Bar.vue';
 
 var router = new VueRouter({
   routes: [
